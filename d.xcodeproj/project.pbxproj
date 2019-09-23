@@ -280,6 +280,7 @@
 					"\"$(SRCROOT)/d/libs\"",
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 9.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					AppKit,
@@ -300,6 +301,7 @@
 					"\"$(SRCROOT)/d/libs\"",
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 9.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					AppKit,
