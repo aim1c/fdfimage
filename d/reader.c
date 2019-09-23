@@ -31,6 +31,7 @@ t_list *readerFromFile(int fd) {
 		exit(EXIT_FAILURE);
 	}
 	head->next = 0;
+	head->content = 0;
 	current = head;
 	
 	while ((res = ft_gnl(fd, &line)) > 0) {
@@ -42,6 +43,7 @@ t_list *readerFromFile(int fd) {
 		}
 		current = current->next;
 		current->next = 0;
+		current->content = 0;
 	}
 	return head;
 }

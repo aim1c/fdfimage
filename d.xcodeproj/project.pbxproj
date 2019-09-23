@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B95FD342338FDA1004A51F8 /* libmlx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B95FD332338FDA1004A51F8 /* libmlx.a */; };
+		4B95FD36233901A9004A51F8 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B95FD35233901A9004A51F8 /* libft.a */; };
+		4B95FD3823390E53004A51F8 /* coordinats.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B95FD3723390E53004A51F8 /* coordinats.c */; };
 		9C3C17222336B6FC00310D9E /* reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C17212336B6FC00310D9E /* reader.c */; };
 		9C3C17242336BDD700310D9E /* freeOnExit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C17232336BDD700310D9E /* freeOnExit.c */; };
 		9C3E7CC92333B9D500ACA27A /* keyrealese.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E7CC82333B9D500ACA27A /* keyrealese.c */; };
-		9C3E7CCD2333BAAD00ACA27A /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3E7CCB2333BAAC00ACA27A /* libft.a */; };
 		9C4F7779233299670017BE0F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F7778233299670017BE0F /* main.c */; };
-		9C4F77812332A1A40017BE0F /* libmlx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4F77802332A1A40017BE0F /* libmlx.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,16 +29,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B95FD332338FDA1004A51F8 /* libmlx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmlx.a; sourceTree = "<group>"; };
+		4B95FD35233901A9004A51F8 /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libft.a; sourceTree = "<group>"; };
+		4B95FD3723390E53004A51F8 /* coordinats.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = coordinats.c; sourceTree = "<group>"; };
 		9C3C17212336B6FC00310D9E /* reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reader.c; sourceTree = "<group>"; };
 		9C3C17232336BDD700310D9E /* freeOnExit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = freeOnExit.c; sourceTree = "<group>"; };
 		9C3E7CC82333B9D500ACA27A /* keyrealese.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = keyrealese.c; sourceTree = "<group>"; };
 		9C3E7CCA2333B9F200ACA27A /* fract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fract.h; sourceTree = "<group>"; };
-		9C3E7CCB2333BAAC00ACA27A /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libft.a; sourceTree = "<group>"; };
 		9C3E7CCC2333BAAC00ACA27A /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		9C4F7775233299670017BE0F /* d */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = d; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4F7778233299670017BE0F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		9C4F777F2332A1A40017BE0F /* mlx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mlx.h; sourceTree = "<group>"; };
-		9C4F77802332A1A40017BE0F /* libmlx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmlx.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4F77812332A1A40017BE0F /* libmlx.a in Frameworks */,
-				9C3E7CCD2333BAAD00ACA27A /* libft.a in Frameworks */,
+				4B95FD342338FDA1004A51F8 /* libmlx.a in Frameworks */,
+				4B95FD36233901A9004A51F8 /* libft.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +58,9 @@
 		9C3C171F2336ABB500310D9E /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				9C3E7CCB2333BAAC00ACA27A /* libft.a */,
+				4B95FD332338FDA1004A51F8 /* libmlx.a */,
+				4B95FD35233901A9004A51F8 /* libft.a */,
 				9C3E7CCC2333BAAC00ACA27A /* libft.h */,
-				9C4F77802332A1A40017BE0F /* libmlx.a */,
 				9C4F777F2332A1A40017BE0F /* mlx.h */,
 				9C3E7CCA2333B9F200ACA27A /* fract.h */,
 			);
@@ -89,6 +91,7 @@
 				9C3E7CC82333B9D500ACA27A /* keyrealese.c */,
 				9C3C17212336B6FC00310D9E /* reader.c */,
 				9C3C17232336BDD700310D9E /* freeOnExit.c */,
+				4B95FD3723390E53004A51F8 /* coordinats.c */,
 			);
 			path = d;
 			sourceTree = "<group>";
@@ -124,11 +127,12 @@
 				TargetAttributes = {
 					9C4F7774233299670017BE0F = {
 						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 9C4F7770233299670017BE0F /* Build configuration list for PBXProject "d" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -150,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4F7779233299670017BE0F /* main.c in Sources */,
+				4B95FD3823390E53004A51F8 /* coordinats.c in Sources */,
 				9C3C17222336B6FC00310D9E /* reader.c in Sources */,
 				9C3C17242336BDD700310D9E /* freeOnExit.c in Sources */,
 				9C3E7CC92333B9D500ACA27A /* keyrealese.c in Sources */,
@@ -279,8 +284,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/d/libs\"",
 					"$(inherited)",
+					"$(PROJECT_DIR)/d/libs",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 9.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-framework",
 					AppKit,
@@ -300,8 +306,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/d/libs\"",
 					"$(inherited)",
+					"$(PROJECT_DIR)/d/libs",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 9.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-framework",
 					AppKit,

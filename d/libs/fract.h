@@ -21,7 +21,8 @@ typedef struct	s_img_size {
 	int			height;
 	int			bpp;
 	int			endian;
-	size_t		lineString;
+	int			rows;
+	int			colums;
 }				t_img_size;
 
 typedef struct	s_cord {
@@ -34,6 +35,20 @@ typedef struct	s_cord {
 	struct		s_cord	*next;
 }				t_cord;
 
+typedef struct	s_line {
+	double		dx;
+	double		dy;
+	double		error;
+	int			sx;
+	int			sy;
+}				t_line;
+
+typedef struct	s_x1_y1 {
+	double		x0;
+	double		x1;
+	double		y0;
+	double		y1;
+}				t_xy;
 
 int key_press(int keycode, void *param);
 
@@ -49,6 +64,8 @@ void ccordRemover(t_cord *cord);
 
 t_list	*readerFromFile(int fd);
 int		openFile(const char *filename);
+t_cord	*getCordList(t_list *list, size_t lstsize);
+
 
 //
 

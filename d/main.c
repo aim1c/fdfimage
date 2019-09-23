@@ -10,83 +10,65 @@
 
 #define UNIQ_BPP 4
 
-
-int		checkCountOfElements(t_list *head) {
-	t_list *current = head->next;
-	size_t desired = head->content_size;
-	size_t verifiable = current->content_size;
+static double abs_double(double a) {
+	int i = -1;
 	
-	while (current->next) {
-		if (desired != verifiable) {
-			ft_putendl("Error: - Count of elements in row are different");
-			return 0;
-		}
-		current = current->next;
-		verifiable = current->content_size;
-	}
-	ft_putendl("Count of elements in rows are valid");
-	return 1;
+	return (a < 0 ? (a * i) : (a));
 }
 
-t_cord *getCordList(t_list *list, size_t lstsize) {
-	t_cord	*head;
-	t_cord	*current;
-	t_list	*mainList = list;
-	char	**arr;
-	int		i = -1;
-	int		row = 0;
+void addPixel(double x, double y, char *addr, t_img_size *imgSize) {
 	
-	if ((head = (t_cord *)malloc(sizeof(t_cord))) == 0) {
-		ft_putendl("Error malloc in getCordList");
-		exit(EXIT_FAILURE);
-	}
-	head->next = 0;
-	current = head;
+	int i = (x * 10 * 4) + (y * 10 * imgSize->width);
 	
-	while (mainList->next) {
-		arr = ft_strsplit(mainList->content, ' ');
-		while (arr[++i] != 0) {
-			current->x = (double)i;
-			current->y = (double)row;
-			current->z = (double)ft_atoi(arr[i]);
-			current->isBottomLine = 0;
-			current->isNewLine = 0;
-			current->next = (t_cord *)malloc(sizeof(t_cord));
-			current = current->next;
-			current->next = 0;
+	addr[i] = 255;
+	addr[++i] = 0;
+	addr[++i] = 0;
+	addr[++i] = 0;
+}
+
+void addline(t_cord *move, t_cord *to, char *addr, t_img_size *imgSize) {
+	
+	t_line calc;
+	t_xy xy = (t_xy){move->x, to->x, move->y, to->y};
+	int e2;
+
+	calc.dx = abs_double(to->x - move->x);
+	calc.sx = move->x < to->x ? (1) : (0);
+	calc.dy = abs_double(to->y - move->y) * -1;
+	calc.sy = move->y < to->y ? (1) : (-1);
+	calc.error = calc.dx + calc.dy;
+	
+	while (42) {
+		if (xy.x0 == xy.x1 && xy.y0 == xy.y1)
+			break ;
+		e2 = 2 * calc.error;
+		if (e2 >= calc.dy) {
+			calc.error += calc.dy;
+			xy.x0 += calc.sx;
 		}
-		mainList->content_size = (size_t)(i + 1);
-		row++;
-		i = -1;
-		mainList = mainList->next;
+		if (e2 <= calc.dx) {
+			calc.error += calc.dx;
+			xy.y0 += calc.sy;
+		}
+		addPixel(xy.x0, xy.y0, addr, imgSize);
 	}
 	
-	if (checkCountOfElements(list) == 0) {
-		ccordRemover(head);
-		exit(EXIT_FAILURE);
-	}
-	return head;
 }
 
 void *getImage(t_img_size *imgSize, void *mlx, void *win, t_cord *ccord) {
-	
 	t_cord *current = ccord;
 	void *img = mlx_new_image(mlx, imgSize->width, imgSize->height);
 	char *addr = mlx_get_data_addr(img, &imgSize->bpp, &imgSize->width, &imgSize->endian);
-	int spaceX = (imgSize->width - 20 * 2) / (int)imgSize->lineString;
-	int spaceY = (imgSize->height - 20 * 2) / 20;
 	
 	while (current->next) {
 		double x = current->x;
 		double y = current->y;
-		int i = ((x * spaceX) * imgSize->bpp / 8) + (y * spaceY * imgSize->width);
-		addr[i] = 255;
-		addr[++i] = 0;
-		addr[++i] = 0;
-		addr[++i] = 0;
+		
+		if (current->next && current->y == current->next->y) {
+			addline(current, current->next, addr, imgSize);
+		}
 		current = current->next;
 	}
-	
 	return img;
 }
 
@@ -97,11 +79,11 @@ void mainGraphicsFunc(t_list *mainList, const char *title) {
 	t_img_size imgSize = (t_img_size){720, 480, 4 * 8, 0, 0};
 	
 	t_cord *cord = getCordList(mainList, ft_lstsize(mainList));
-	imgSize.lineString = mainList->content_size;
-	mainListRemover(mainList);
-	void *img = getImage(&imgSize, mlx, win, cord);
-	
-	mlx_put_image_to_window(mlx, win, img, (1280 - 720) / 2, (720 - 480) / 2);
+//	imgSize.lineString = mainList->content_size;
+//	mainListRemover(mainList);
+//	void *img = getImage(&imgSize, mlx, win, cord);
+//
+//	mlx_put_image_to_window(mlx, win, img, (1280 - 720) / 2, (720 - 480) / 2);
 	
 	
 	mlx_hook(win, 3, 0, key_press, cord);
