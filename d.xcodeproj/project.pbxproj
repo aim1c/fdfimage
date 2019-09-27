@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		9C3C01E3233DFEA10096E160 /* breh.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C01E2233DFEA10096E160 /* breh.c */; };
+=======
 		4B95FD342338FDA1004A51F8 /* libmlx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B95FD332338FDA1004A51F8 /* libmlx.a */; };
 		4B95FD36233901A9004A51F8 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B95FD35233901A9004A51F8 /* libft.a */; };
 		4B95FD3823390E53004A51F8 /* coordinats.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B95FD3723390E53004A51F8 /* coordinats.c */; };
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 		9C3C17222336B6FC00310D9E /* reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C17212336B6FC00310D9E /* reader.c */; };
 		9C3C17242336BDD700310D9E /* freeOnExit.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C17232336BDD700310D9E /* freeOnExit.c */; };
+		9C3C594A233D4F9900E42C92 /* cord.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C5949233D4F9900E42C92 /* cord.c */; };
 		9C3E7CC92333B9D500ACA27A /* keyrealese.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E7CC82333B9D500ACA27A /* keyrealese.c */; };
 		9C4F7779233299670017BE0F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F7778233299670017BE0F /* main.c */; };
 /* End PBXBuildFile section */
@@ -29,11 +34,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		9C3C01E2233DFEA10096E160 /* breh.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = breh.c; sourceTree = "<group>"; };
+=======
 		4B95FD332338FDA1004A51F8 /* libmlx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmlx.a; sourceTree = "<group>"; };
 		4B95FD35233901A9004A51F8 /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libft.a; sourceTree = "<group>"; };
 		4B95FD3723390E53004A51F8 /* coordinats.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = coordinats.c; sourceTree = "<group>"; };
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 		9C3C17212336B6FC00310D9E /* reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reader.c; sourceTree = "<group>"; };
 		9C3C17232336BDD700310D9E /* freeOnExit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = freeOnExit.c; sourceTree = "<group>"; };
+		9C3C5948233D4F9900E42C92 /* cord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cord.h; sourceTree = "<group>"; };
+		9C3C5949233D4F9900E42C92 /* cord.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cord.c; sourceTree = "<group>"; };
 		9C3E7CC82333B9D500ACA27A /* keyrealese.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = keyrealese.c; sourceTree = "<group>"; };
 		9C3E7CCA2333B9F200ACA27A /* fract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fract.h; sourceTree = "<group>"; };
 		9C3E7CCC2333BAAC00ACA27A /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
@@ -58,8 +69,13 @@
 		9C3C171F2336ABB500310D9E /* libs */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				9C3E7CCB2333BAAC00ACA27A /* libft.a */,
+				9C3C5948233D4F9900E42C92 /* cord.h */,
+=======
 				4B95FD332338FDA1004A51F8 /* libmlx.a */,
 				4B95FD35233901A9004A51F8 /* libft.a */,
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 				9C3E7CCC2333BAAC00ACA27A /* libft.h */,
 				9C4F777F2332A1A40017BE0F /* mlx.h */,
 				9C3E7CCA2333B9F200ACA27A /* fract.h */,
@@ -91,7 +107,12 @@
 				9C3E7CC82333B9D500ACA27A /* keyrealese.c */,
 				9C3C17212336B6FC00310D9E /* reader.c */,
 				9C3C17232336BDD700310D9E /* freeOnExit.c */,
+<<<<<<< HEAD
+				9C3C5949233D4F9900E42C92 /* cord.c */,
+				9C3C01E2233DFEA10096E160 /* breh.c */,
+=======
 				4B95FD3723390E53004A51F8 /* coordinats.c */,
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 			);
 			path = d;
 			sourceTree = "<group>";
@@ -153,6 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3C01E3233DFEA10096E160 /* breh.c in Sources */,
+				9C3C594A233D4F9900E42C92 /* cord.c in Sources */,
 				9C4F7779233299670017BE0F /* main.c in Sources */,
 				4B95FD3823390E53004A51F8 /* coordinats.c in Sources */,
 				9C3C17222336B6FC00310D9E /* reader.c in Sources */,
@@ -286,7 +309,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/d/libs",
 				);
+<<<<<<< HEAD
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+=======
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 				OTHER_LDFLAGS = (
 					"-framework",
 					AppKit,
@@ -308,7 +335,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/d/libs",
 				);
+<<<<<<< HEAD
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+=======
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 				OTHER_LDFLAGS = (
 					"-framework",
 					AppKit,

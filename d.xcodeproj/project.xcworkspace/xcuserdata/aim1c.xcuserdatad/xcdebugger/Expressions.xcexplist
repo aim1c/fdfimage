@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "getCordArray:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr[elem]">
+            </PersistentString>
+            <PersistentString
+               value = "newArray[(elem + (row * (int)elementsValue))]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "getCordList:main.c">
          <PersistentStrings>
             <PersistentString

@@ -23,12 +23,6 @@ void mainListRemover(t_list *mainList) {
 }
 
 void ccordRemover(t_cord *cord) {
-	t_cord *current = cord->next;
-	
-	while (current) {
-		free(cord);
-		cord = current;
-		current = current->next;
-	}
+	free(cord);
 	ft_putendl("LOG: - Coordinats has been deleted successfull");
 }

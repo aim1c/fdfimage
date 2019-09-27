@@ -59,17 +59,4 @@ void checkReaderWork(t_list *head) {
 	}
 }
 
-void checkCord(t_cord *mainCoord) {
-	int oldRow = 0;
-	t_cord *cor = mainCoord;
-	
-	while (cor->next) {
-		if (oldRow < cor->y) {
-			printf("\n");
-			oldRow = cor->y;
-		}
-		printf("%2.0f ", cor->z);
-		cor = cor->next;
-	}
-}
 //

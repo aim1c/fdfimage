@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alexander Volkov. All rights reserved.
 //
 
-#include "fract.h"
+#include "libs/fract.h"
 
 int key_press(int keycode, void *param) {
 	if (keycode == 53) {

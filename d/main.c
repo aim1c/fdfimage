@@ -10,6 +10,24 @@
 
 #define UNIQ_BPP 4
 
+<<<<<<< HEAD
+void printTab(t_cord *cord, t_lim *lim) {
+	
+	int xLim = (int)lim->x;
+	int yLim = (int)lim->y;
+	
+	int row = -1;
+	int elem = -1;
+	
+	while (++row < yLim - 1) {
+		elem = -1;
+		while (++elem < xLim) {
+			t_cord new = cord[(elem + (row * xLim))];
+			
+			printf("%3.0f", new.z);
+		}
+		printf("\n");
+=======
 static double abs_double(double a) {
 	int i = -1;
 	
@@ -51,15 +69,19 @@ void addline(t_cord *move, t_cord *to, char *addr, t_img_size *imgSize) {
 			xy.y0 += calc.sy;
 		}
 		addPixel(xy.x0, xy.y0, addr, imgSize);
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 	}
 	
 }
+
 
 void *getImage(t_img_size *imgSize, void *mlx, void *win, t_cord *ccord) {
 	t_cord *current = ccord;
 	void *img = mlx_new_image(mlx, imgSize->width, imgSize->height);
 	char *addr = mlx_get_data_addr(img, &imgSize->bpp, &imgSize->width, &imgSize->endian);
 	
+<<<<<<< HEAD
+=======
 	while (current->next) {
 		double x = current->x;
 		double y = current->y;
@@ -69,6 +91,7 @@ void *getImage(t_img_size *imgSize, void *mlx, void *win, t_cord *ccord) {
 		}
 		current = current->next;
 	}
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 	return img;
 }
 
@@ -76,9 +99,20 @@ void mainGraphicsFunc(t_list *mainList, const char *title) {
 	
 	void *mlx = mlx_init();
 	void *win = mlx_new_window(mlx, 1280, 720, (char *)title);
+	
+	t_lim *lim = malloc(sizeof(t_lim));
 	t_img_size imgSize = (t_img_size){720, 480, 4 * 8, 0, 0};
 	
+<<<<<<< HEAD
+	
+	t_cord *cord = getCordArray(mainList, lim);
+	mainListRemover(mainList);
+	printTab(cord, lim);
+	
+//	t_cord *cord = getCordList(mainList, ft_lstsize(mainList));
+=======
 	t_cord *cord = getCordList(mainList, ft_lstsize(mainList));
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 //	imgSize.lineString = mainList->content_size;
 //	mainListRemover(mainList);
 //	void *img = getImage(&imgSize, mlx, win, cord);

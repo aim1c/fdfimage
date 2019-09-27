@@ -14,6 +14,7 @@
 #include "mlx.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "cord.h"
 
 
 typedef struct	s_img_size {
@@ -25,6 +26,8 @@ typedef struct	s_img_size {
 	int			colums;
 }				t_img_size;
 
+<<<<<<< HEAD
+=======
 typedef struct	s_cord {
 	
 	double		x;
@@ -50,6 +53,7 @@ typedef struct	s_x1_y1 {
 	double		y1;
 }				t_xy;
 
+>>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
 int key_press(int keycode, void *param);
 
 
