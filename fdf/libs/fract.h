@@ -15,45 +15,44 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "cord.h"
+#include "bresenhamline.h"
 
 
-typedef struct	s_img_size {
-	int			width;
-	int			height;
-	int			bpp;
-	int			endian;
-	int			rows;
-	int			colums;
-}				t_img_size;
-
-<<<<<<< HEAD
-=======
 typedef struct	s_cord {
 	
 	double		x;
 	double		y;
 	double		z;
-	int			isNewLine;
-	int			isBottomLine;
-	struct		s_cord	*next;
 }				t_cord;
 
-typedef struct	s_line {
-	double		dx;
-	double		dy;
-	double		error;
-	int			sx;
-	int			sy;
-}				t_line;
+size_t		checkCountOfElements(t_list *head);
 
-typedef struct	s_x1_y1 {
-	double		x0;
-	double		x1;
-	double		y0;
-	double		y1;
+typedef struct	s_xy {
+	double x;
+	double y;
 }				t_xy;
 
->>>>>>> 323b9b4e0fe9c7062fc86667049adeaa28394741
+
+typedef struct	s_lim {
+	size_t		x;
+	size_t		y;
+}				t_lim;
+
+typedef struct	s_img {
+	int bpp;
+	int endian;
+	int width;
+	int height;
+	t_lim	*lim;
+	char	*addr;
+}				t_img;
+
+
+t_cord 		*getCordArray(t_list *main, t_lim *lim);
+void		lineBr(t_cord xy0, t_cord xy1, t_img *img);
+void putPixel(double x, double y, t_img *img);
+
+
 int key_press(int keycode, void *param);
 
 

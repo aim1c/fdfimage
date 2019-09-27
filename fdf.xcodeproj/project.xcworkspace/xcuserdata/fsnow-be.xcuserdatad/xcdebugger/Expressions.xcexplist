@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "getImage:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cord[(elem + (row * lim-&gt;x))].y">
+            </PersistentString>
+            <PersistentString
+               value = "cord[(elem + (row * lim-&gt;x))].x">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "makeISO:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cord[(elem + (row * lim-&gt;x))]-&gt;z">
+            </PersistentString>
+            <PersistentString
+               value = "cord[(elem + (row * lim-&gt;x))]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "iso:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "-cord-&gt;z + (previous_x + previous_y) * sin(0.523599)">
+            </PersistentString>
+            <PersistentString
+               value = "sin(0.523599)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "putPixel:breh.c">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
